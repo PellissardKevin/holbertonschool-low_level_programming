@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-/**
-* Function to print a string
-*/
+/**Function to print a string*/
 
 int main(void) 
 {
