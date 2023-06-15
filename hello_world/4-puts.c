@@ -1,5 +1,8 @@
 #include <stdio.h>
-int main(void)/*function to print string*/
+/**
+ * Function to print a string
+ */
+int main(void)
 {
 char string[] = "\"Programming is like building a multilingual puzzle";
 
