@@ -1,0 +1,1 @@
+Exercise to understand variables, loop for and while et an conditions with if and else
