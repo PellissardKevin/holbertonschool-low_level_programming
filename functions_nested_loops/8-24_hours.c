@@ -31,19 +31,19 @@ void jack_bauer(void)
 			w++;
 		}
 		for (x = 0; x < 5; x++)
-	       	{
-       			for (y = 0; y < 6; y++)
+		{
+			for (y = 0; y < 6; y++)
 			{
-		       		for (z = 0; z < 10; z++)
-		       		{
-	       				_putchar('0' + w);
-       					_putchar('0' + x);
+				for (z = 0; z < 10; z++)
+				{
+					_putchar('0' + w);
+					_putchar('0' + x);
 					_putchar(':');
-				       	_putchar('0' + y);
-				       	_putchar('0' + z);
-				       	_putchar('\n');
-			       	}
-		       	}
-	       	}
-       	}
+					_putchar('0' + y);
+					_putchar('0' + z);
+					_putchar('\n');
+				}
+			}
+		}
+	}
 }
