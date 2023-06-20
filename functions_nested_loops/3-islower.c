@@ -3,6 +3,7 @@
 
 /**
  * _islower - return 1 if c is lower
+ * @c: c an integer
  * Return: 1 when c is lower
  */
 int _islower(int c)
