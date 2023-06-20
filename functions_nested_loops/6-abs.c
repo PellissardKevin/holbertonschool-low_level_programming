@@ -8,9 +8,5 @@
 
 int _abs(int c)
 {
-	int x;
-
-	x = abs(c);
-
-	return (x);
+	return (c*((c*2+1)%2));
 }
