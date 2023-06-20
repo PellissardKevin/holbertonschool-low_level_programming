@@ -9,9 +9,9 @@ int print_last_digit(int n)
 {
 	int abs, last;
 
-	abs = (n*((n*2+1)%2));
+	abs = (n * ((n * 2 + 1) % 2));
 	last = (abs % 10);
 
-	_putchar('0' + last);
+	_putchar(48 + last);
 	return (last);
 }
