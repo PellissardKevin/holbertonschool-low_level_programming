@@ -2,6 +2,8 @@
 
 /**
  * add - add some integer
+ * @x: integer
+ * @y: integer
  * Return: Result of add
  */
 
