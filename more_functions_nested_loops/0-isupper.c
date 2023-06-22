@@ -14,5 +14,5 @@ int _isupper(int c)
 	if (!(c >= 65 && c <= 90))
 		n = 0;
 
-	return(n);
+	return (n);
 }
