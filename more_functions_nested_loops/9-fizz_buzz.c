@@ -20,7 +20,8 @@ int main(void)
 		{
 			if (i == n)
 				printf("Buzz\n");
-			printf("Buzz ");
+			else
+				printf("Buzz ");
 		}
 
 		else
