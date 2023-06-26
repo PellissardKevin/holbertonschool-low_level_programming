@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints a string with new line
- * @st: strings
+ * @str: strings
  * Return: void
  */
 
@@ -10,7 +10,7 @@ void _puts(char *str)
 {
 	int i;
 
-	for(i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
