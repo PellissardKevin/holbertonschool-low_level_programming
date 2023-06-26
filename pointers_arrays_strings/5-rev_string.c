@@ -1,6 +1,6 @@
 #include "main.h"
 #include "2-strlen.c"
-#include "_putchar.c"
+
 /**
  * rev_string - reverse string
  * @s: string
