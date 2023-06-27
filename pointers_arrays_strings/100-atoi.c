@@ -7,13 +7,29 @@
  */
 int _atoi(char *s)
 {
-	int ret = 0, i;
+	int length = 0, negativeCount = 0, count = 0, num = 0;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	while (s[length] != '\0')
+		length++;
+
+	while (count < length)
 	{
-		if (!(s[i]> '9' || s[i]<'0'))
-			ret = ret*10 + s[i] - '0';
+		if (s[count] == '-')
+		{
+			negativeCount++;
+			}
+		if (s[count] >= 48 && s[count] <= 57)
+		{
+			for (; s[count] >= 48 && s[count] <= 57; count++)
+			{
+				num = (10 * num - (s[count] - 48));
+			}
+			break;
+		}
+		count++;
 	}
-
-	return ret;
+	if (negativeCount % 2 != 0)
+		return (num);
+	else
+		return (-num);
 }
