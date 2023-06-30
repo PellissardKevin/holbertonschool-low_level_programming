@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 			return (s);
 		if (!*s)
-			s = 0;
+			*s = '\0';
 	}
 	return (s);
 }
