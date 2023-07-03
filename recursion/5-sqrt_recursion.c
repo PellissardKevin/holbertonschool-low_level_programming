@@ -9,10 +9,10 @@ int _sqrt(int n, int src)
 {
 	if (n * n == src)
 		return (n);
-	if ( n * n > src)
+	if (n * n > src)
 		return (-1);
 
-	return _sqrt(n + 1, src);
+	return (_sqrt(n + 1, src));
 }
 
 /**
