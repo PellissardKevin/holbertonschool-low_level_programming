@@ -1,5 +1,5 @@
-#ifdef __protect__
-#define __protect_
+#ifndef __protect__
+#define __protect__
 
 int _putchar(char c);
 int _islower(int c);
