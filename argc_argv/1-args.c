@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define UNUSED(argv) (void)(argv)
+
 /**
  * main - print all arguments
  * @argc: int
@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	UNUSED(argv);
+	(void)(argv);
 	printf("%d\n", (argc - 1));
 
 	return (0);
