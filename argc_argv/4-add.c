@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "main.h"
 /**
@@ -9,12 +10,32 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, sum = 0;
+	unsigned int k;
+	char *e;
 
-	for (i = 0; i < argc; i++)
-		sum = sum + atoi(argv[i]);
+	if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			e = argv[i];
 
-	printf("%d\n", sum);
+			for (k = 0; k < strlen(e); k++)
+			{
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(e);
+			e++;
+		}
+
+		printf("%d\n", sum);
+	}
+	else
+		printf("0\n");
 
 	return (0);
 }
