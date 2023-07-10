@@ -17,6 +17,11 @@ char *str_concat(char *s1, char *s2)
 		s1 = '\0';
 	else if (s2 == NULL)
 		s2 = '\0';
+	else if (s1 == NULL && s2 == NULL)
+	{
+		s1 = '\0';
+		s2 = '\0';
+	}
 
 	/*  size of string s1 and s2 */
 	while (s1[size_s1])
@@ -26,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		size_s2++;
 
 	/* Allocate memory */
-	ptr = malloc(size_s1 + size_s2);
+	ptr = malloc((size_s1 + size_s2) + 1);
 
 	if (ptr == NULL)
 		return (NULL);
