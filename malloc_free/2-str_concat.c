@@ -1,4 +1,4 @@
-0;10;1c0;10;1c#include "main.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -9,19 +9,15 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size_s1 = 0, size_s2 = 0;
-	char *ptr, *res;
+	int size_s1 = 0, size_s2 = 0, i = 0;
+	char *ptr;
 
 	/* if s1 = NULL or s2 = NULL */
 	if (s1 == NULL)
-		s1 = '\0';
-	else if (s2 == NULL)
-		s2 = '\0';
-	else if (s1 == NULL && s2 == NULL)
-	{
-		s1 = '\0';
-		s2 = '\0';
-	}
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
 
 	/*  size of string s1 and s2 */
 	while (s1[size_s1])
@@ -37,14 +33,17 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	/*duplicate and concate strings*/
-	res = ptr;
-	while (*s1)
-		*res++ = *s1++;
+	while (i < (size_s1 + size_s2))
+	{
+		if (i <= size_s1)
+			ptr[i] = s1[i];
+		if (i >= size_s1)
+			ptr[i] = *s2++;
 
-	while (*s2)
-		*res++ = *s2++;
+		i++;
+	}
 
-	*res = '\0';
+	ptr[i] = '\0';
 
 	return (ptr);
 }
