@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _strdup = copy a string with new allocate memory
+ * _strdup - copy a string with new allocate memory
  * @str: pointer to a string
  * Return: Null if str = Null else return pointer to str
  */
@@ -10,6 +10,9 @@ char *_strdup(char *str)
 {
 	int size = 0;
 	char *ptr, *dup;
+
+	if (str == NULL)
+		return (NULL);
 
 	/* string length */
 	while (str[size])
