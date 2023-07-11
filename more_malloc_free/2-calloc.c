@@ -6,20 +6,23 @@
  * _calloc - allocate memory set to zero
  * @nmemb: number of elements
  * @size: the size of the memory
- *
  * Return: Nothing.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	int *ptr = malloc(nmemb * size);
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	if (ptr != NULL)
-		for (i = 0; i < size; i++)
-			ptr[i] = 0;
+	ptr = malloc((nmemb * size));
+
+	if (ptr == NULL)
+		return (NULL);
+
+	for (i = 0; i < (nmemb * size); i++)
+		ptr[i] = 0;
 
 	return (ptr);
 }
