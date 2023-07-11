@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * str_concat - concatenation of two string
+ * string_nconcat - concatenation of two string
  * @s1: first string
  * @s2: second string
+ * @n: number of string 2
  * Return: Pointer with space or null if it's an ampty string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
