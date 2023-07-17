@@ -1,5 +1,9 @@
-struct dog {
+#ifndef _struct
+#define _struct
+(struct dog
+{
 	char *name;
 	float age;
-        char *owner;
-} Dog;
+	char *owner;
+} Dog;)
+#endif
