@@ -1,3 +1,13 @@
+#include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ * main - program to find an operation
+ * @argc: number of argument
+ * @argv: list of argument
+ *
+ * Return: 0 Success
+*/
 int main(int argc, char *argv[])
 {
 	int (*fptr)(int, int);
