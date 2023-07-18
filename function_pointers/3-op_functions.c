@@ -52,7 +52,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_add - modulo of 2 integer
+ * op_mod - modulo of 2 integer
  * @a: first integer
  * @b: second integer
  * Return: modulo of 2 integer
