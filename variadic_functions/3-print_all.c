@@ -7,7 +7,7 @@
  * pchar - print a char
  * @ap: list of argument to print
 */
-void pchar (va_list ap)
+void pchar(va_list ap)
 {
 	printf("%c", va_arg(ap, int));
 }
@@ -16,7 +16,7 @@ void pchar (va_list ap)
  * pint - print a int
  * @ap: list of argument to print
 */
-void pint (va_list ap)
+void pint(va_list ap)
 {
 	printf("%d", va_arg(ap, int));
 }
@@ -25,7 +25,7 @@ void pint (va_list ap)
  * pfloat - print a float
  * @ap: list of argument to print
 */
-void pfloat (va_list ap)
+void pfloat(va_list ap)
 {
 	printf("%f", va_arg(ap, double));
 }
@@ -34,16 +34,16 @@ void pfloat (va_list ap)
  * pstring - print a string
  * @ap: list of argument to print
 */
-void pstring (va_list ap)
+void pstring(va_list ap)
 {
 	char *s;
 
 	s = va_arg(ap, char *);
 	if (s == NULL)
-		{
-			printf("(nil)");
-			return;
-		}
+	{
+		printf("(nil)");
+		return;
+	}
 	printf("%s", s);
 }
 
