@@ -1,9 +1,9 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 /**
- * struct form - Struct fom
+ * struct form - Struct form
  *
- * @form: The format of string
+ * @format_print: The format of string
  * @func: The function associated
  */
 typedef struct form
