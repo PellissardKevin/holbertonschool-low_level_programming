@@ -7,8 +7,7 @@
  */
 void free_list(list_t *head)
 {
-	list_t *tmpact = head;
-	list_t *tmpnext;
+	list_t *tmpnext, *tmpact = head;
 
 	while (tmpact != NULL)
 	{
@@ -17,6 +16,4 @@ void free_list(list_t *head)
 		free(tmpact);
 		tmpact = tmpnext;
 	}
-
-	free(tmpnext);
 }
