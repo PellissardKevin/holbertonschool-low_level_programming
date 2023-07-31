@@ -1,18 +1,18 @@
 #include "lists.h"
 /**
- * free_lists - freed a list
+ * free_list - freed a list
  *
  * @head: elements of list
  * Return: void
  */
 void free_list(list_t *head)
 {
-	list_t *last = head;
+	list_t *tmp;
 
-	if (head == NULL || last == NULL)
-		return;
-
-	free(last);
-
-	return;
+	while (head != NULL)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
 }
