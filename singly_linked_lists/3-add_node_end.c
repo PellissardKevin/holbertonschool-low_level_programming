@@ -4,7 +4,7 @@
  *
  * @head: head of the list
  * @str: string to add at the end
- * @return list_t
+ * Return: a list_t value
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
