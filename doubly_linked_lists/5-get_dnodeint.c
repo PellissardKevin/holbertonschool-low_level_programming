@@ -8,16 +8,21 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *displaynode = (struct dlistint_s *) malloc(sizeof(struct dlistint_s));
+	dlistint_t *displaynode;
 	unsigned int i;
+
+	displaynode = (struct dlistint_s *) malloc(sizeof(struct dlistint_s));
 
 	if (head == NULL || displaynode == NULL)
 		return (0);
 
 	for (i = 0; i < index; i++)
-		head = head->next;
-
-
+	{
+		if (head != NULL)
+			head = head->next;
+		else
+			return (0);
+	}
 	displaynode->n = head->n;
 
 	return (displaynode);
