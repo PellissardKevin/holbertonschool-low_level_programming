@@ -18,6 +18,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (0);
 
 	tmp = *h;
+
+	if (tmp->next == NULL)
+	{
+		displaynode = add_dnodeint_end(h, n);
+		return (displaynode);
+	}
+
+	if (tmp->prev)
+	{
+		displaynode = add_dnodeint(h, n);
+		return (displaynode);
+	}
+
 	displaynode->n = n;
 
 	for (i = 0; i < idx - 1; i++)
