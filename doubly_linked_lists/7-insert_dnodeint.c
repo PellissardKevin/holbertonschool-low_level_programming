@@ -28,15 +28,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	displaynode->n = n;
 
 	for (i = 0; i < idx - 1; i++)
+	{
+		if (tmp != NULL)
+			tmp = tmp->next;
+		else
 		{
-			if (*h != NULL)
-				tmp = tmp->next;
-			else
-			{
-				displaynode = add_dnodeint_end(h, n);
-				return (displaynode);
-			}
+			return (0);
 		}
+	}
 
 	displaynode->next = tmp->next;
 
