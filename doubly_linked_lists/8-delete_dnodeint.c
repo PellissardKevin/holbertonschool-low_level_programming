@@ -8,15 +8,11 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *displaynode, *tmp;
+	dlistint_t *displaynode, *tmp= *head;
 	unsigned int i;
 
-	tmp = (struct dlistint_s *) malloc(sizeof(struct dlistint_s));
-
-	if (*head == NULL || tmp == NULL)
+	if (*head == NULL)
 		return (-1);
-
-	tmp = *head;
 
 	if (index == 0)
 	{
@@ -31,9 +27,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (tmp != NULL)
 			tmp = tmp->next;
 		else
-		{
 			return (-1);
-		}
 	}
 
 	displaynode = tmp->next;
