@@ -31,11 +31,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 
 	displaynode = tmp->next;
-	displaynode->prev = tmp;
 
 	tmp->next = tmp->next->next;
 	tmp->prev = displaynode->prev;
-
 	displaynode->next = NULL;
 	free(displaynode);
 
