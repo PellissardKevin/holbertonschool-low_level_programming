@@ -32,9 +32,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (tmp != NULL)
 			tmp = tmp->next;
 		else
-		{
 			return (0);
-		}
 	}
 
 	displaynode->next = tmp->next;
