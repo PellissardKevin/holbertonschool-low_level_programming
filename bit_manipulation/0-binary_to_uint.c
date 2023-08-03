@@ -17,8 +17,11 @@ unsigned int binary_to_uint(const char *b)
 		if (*b == '0')
 			conv *= 2;
 
-		if (*b == '1')
+		else if (*b == '1')
 			conv = (conv * 2) + 1;
+
+		else
+			return (0);
 
 		b++;
 	}
