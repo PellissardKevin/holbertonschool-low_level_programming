@@ -7,19 +7,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 31, mask = (1 << i);
+	int i = 63, mask = (1 << i);
 
 	for (; (n >> i) == 0 && (i > 0); i--)
 		mask = (1 << i);
 
+printf("i = %d\n", i);
 
 	for (; i >= 0; i--)
 	{
 		mask = (1 << i);
-
 		if (n & mask)
 			_putchar('1');
 		else
 			_putchar('0');
+
 	}
 }
