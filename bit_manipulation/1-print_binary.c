@@ -12,8 +12,6 @@ void print_binary(unsigned long int n)
 	for (; (n >> i) == 0 && (i > 0); i--)
 		mask = (1 << i);
 
-printf("i = %d\n", i);
-
 	for (; i >= 0; i--)
 	{
 		mask = (1 << i);
