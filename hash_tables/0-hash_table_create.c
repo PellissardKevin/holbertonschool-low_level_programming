@@ -7,16 +7,16 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ptr = (struct hash_table_s *)malloc(sizeof(struct hash_table_s));
+	hash_table_t *ptr= malloc(sizeof(hash_table_t));
 
 	if (ptr == NULL)
 		return (0);
 
 	ptr->size = size;
-	ptr->array = malloc(size * sizeof(struct hash_node_s));
+	ptr->array = malloc(size * sizeof(hash_node_t));
 
 	if (ptr->array == NULL)
 		return (0);
-	
+
 	return (ptr);
 }
