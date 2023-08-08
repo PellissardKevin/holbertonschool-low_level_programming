@@ -11,11 +11,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index = key_index((unsigned char *)key, ht->size);
 
-	if (key == NULL || value == NULL)
+	if (ht == NULL || key == NULL)
 		return (0);
 
-	ht->array[index] = malloc(sizeof(hash_node_t));
+	if (value ==NULL)
+		value = "";
 
+	ht->array[index] = malloc(sizeof(hash_node_t));
 	if (!ht->array[index])
 		return (0);
 
