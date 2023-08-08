@@ -8,8 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to;
-	int bytes = 1024, num;
+	int file_from, file_to, bytes = 1024, num;
 	char buf[1024];
 
 	if (argc != 3)
