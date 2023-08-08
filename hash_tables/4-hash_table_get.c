@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (!ht)
 		return (0);
-		
+
 	index = key_index((unsigned char *)key, ht->size);
 
 	if (!ht->array[index])
@@ -30,5 +30,4 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	}
 
 	return (0);
-
 }
