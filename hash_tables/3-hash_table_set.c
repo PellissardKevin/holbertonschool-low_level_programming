@@ -9,11 +9,11 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index;
+	unsigned long 		int index = 0;
 	hash_node_t *temp = NULL;
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
 
-	if (ht == NULL || key == NULL || new_node == NULL)
+	if (!ht || !new_node)
 		return (0);
 
 	if (value == NULL)
