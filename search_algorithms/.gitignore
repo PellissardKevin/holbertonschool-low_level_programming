@@ -3,6 +3,5 @@
 !*-O
 /listint
 /skiplist
-104-advanced_binary.c
 105-jump_list.c
 106-linear_skip.c
